@@ -1,5 +1,7 @@
-package au.com.telstra.simcardactivator;
+package au.com.telstra.simcardactivator.service;
 
+import au.com.telstra.simcardactivator.entity.SimCardActivationRequest;
+import au.com.telstra.simcardactivator.entity.SimCardActivationResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

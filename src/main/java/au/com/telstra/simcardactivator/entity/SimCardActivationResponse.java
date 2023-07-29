@@ -1,4 +1,4 @@
-package au.com.telstra.simcardactivator;
+package au.com.telstra.simcardactivator.entity;
 
 import lombok.Getter;
 import lombok.Setter;
