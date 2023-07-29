@@ -68,7 +68,6 @@ public class SImCardActivationIntegrationTest {
         );
 
         //when
-
         SimCardActivationResponse expectedResponse = new SimCardActivationResponse(false);
 
         Mockito.when(restTemplate.postForObject(
