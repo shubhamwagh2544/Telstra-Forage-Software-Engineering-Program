@@ -1,15 +1,13 @@
 package au.com.telstra.simcardactivator.controller;
 
+import au.com.telstra.simcardactivator.entity.SimCard;
 import au.com.telstra.simcardactivator.entity.SimCardActivationRequest;
 import au.com.telstra.simcardactivator.entity.SimCardActivationResponse;
 import au.com.telstra.simcardactivator.service.SimCardActivationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @AllArgsConstructor
@@ -28,6 +26,15 @@ public class SimCardActivationController {
         SimCardActivationResponse activationResponse = activationService.activateSimCard(activationRequest);
         log.info("SimCard Activation Response {} : ", activationResponse);
         return activationResponse;
+    }
+
+    @GetMapping(
+            path = "{simCardId}"
+    )
+    public SimCard getSimCard(@PathVariable Long simCardId) {
+        log.info("Reading simcard with id {}", simCardId);
+        SimCard simCard = activationService.getSimCard(simCardId);
+        return simCard;
     }
 
 }
