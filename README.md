@@ -1,3 +1,3 @@
-# Telstra Starter Repo :bird:
+# Telstra Software Engineering Program 🐯:
 
-This repo has everything you need to get started on the Telstra program!
+This repo contains tasks assigned by Telstra's SWE Program !
