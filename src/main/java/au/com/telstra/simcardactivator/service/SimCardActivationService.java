@@ -38,12 +38,11 @@ public class SimCardActivationService {
     }
 
     public SimCard getSimCard(Long simCardId) {
-        SimCard simCard = simCardRepository.
+        return simCardRepository.
                 findById(simCardId)
                 .orElseThrow(() -> new SimCardNotFoundException(
                         String.format("Simcard with id %s was not found", simCardId)
                 ));
 
-        return simCard;
     }
 }

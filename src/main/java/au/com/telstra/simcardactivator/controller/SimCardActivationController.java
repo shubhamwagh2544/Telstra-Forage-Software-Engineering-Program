@@ -33,8 +33,7 @@ public class SimCardActivationController {
     )
     public SimCard getSimCard(@PathVariable Long simCardId) {
         log.info("Reading simcard with id {}", simCardId);
-        SimCard simCard = activationService.getSimCard(simCardId);
-        return simCard;
+        return activationService.getSimCard(simCardId);
     }
 
 }
